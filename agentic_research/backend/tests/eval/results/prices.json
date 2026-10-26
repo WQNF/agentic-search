@@ -1,0 +1,9 @@
+{
+  "model": "deepseek-flash",
+  "currency": "CNY",
+  "input_per_1m": null,
+  "output_per_1m": null,
+  "cached_input_per_1m": null,
+  "source": "运行日从 DeepSeek 控制台账单/价目页填写",
+  "as_of": ""
+}

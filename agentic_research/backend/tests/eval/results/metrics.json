@@ -1,0 +1,2056 @@
+{
+  "meta": {
+    "companies_expected": 30,
+    "runs_measured": 30,
+    "fields_expected": 150,
+    "fields_measured": 150,
+    "gt_rows": 150,
+    "prices": {
+      "model": "deepseek-flash",
+      "currency": "CNY",
+      "input_per_1m": null,
+      "output_per_1m": null,
+      "cached_input_per_1m": null,
+      "source": "运行日从 DeepSeek 控制台账单/价目页填写",
+      "as_of": ""
+    },
+    "environment": {
+      "python": "3.11.15",
+      "platform": "Windows-10-10.0.26200-SP0",
+      "model": "deepseek-flash",
+      "search_provider": "serper",
+      "quote_provider": "eastmoney",
+      "proxy": true,
+      "config_sha256_16": "6e177e48606dbb0f",
+      "instrument_sha256_16": "9a0228150ed79696",
+      "text_sha256_16": "faccca3017a20e0d",
+      "cwd": "D:\\Python_exercise\\项目2-智慧投研Agent\\③项目代码\\agentic_research\\backend"
+    }
+  },
+  "metrics": {
+    "1": {
+      "count": 30,
+      "total": 30,
+      "rate": 1.0,
+      "ci95": [
+        0.8864829086095221,
+        1.0
+      ],
+      "measured": 30,
+      "expected": 30,
+      "note": "成功=5 个 section 非空且无 fatal；全量分母 30",
+      "final_status_dist": {
+        "success": 30
+      },
+      "quality_success": {
+        "count": 30,
+        "total": 30,
+        "note": "补充口径：系统自己的 final_status=success，仅作对照，不替代指标 1"
+      }
+    },
+    "3": {
+      "count": 30,
+      "total": 30,
+      "rate": 1.0,
+      "ci95": [
+        0.8864829086095221,
+        1.0
+      ],
+      "measured": 30,
+      "expected": 30
+    },
+    "4": {
+      "count": 149,
+      "total": 150,
+      "rate": 0.9933333333333333,
+      "ci95": [
+        0.9632062470660241,
+        0.9988222289768665
+      ],
+      "measured": 150,
+      "expected": 150,
+      "note": "报告层字段；150=30 家×5 字段；容差 1%；US=SEC 官方，CN/HK=新浪/东财 vendor 参考值（待官方复核）",
+      "missing": 0
+    },
+    "5": {
+      "CN": {
+        "count": 49,
+        "total": 50,
+        "rate": 0.98,
+        "ci95": [
+          0.8950431352816304,
+          0.9964608319110235
+        ],
+        "measured": 50,
+        "expected": 50
+      },
+      "HK": {
+        "count": 50,
+        "total": 50,
+        "rate": 1.0,
+        "ci95": [
+          0.9286499658256813,
+          1.0
+        ],
+        "measured": 50,
+        "expected": 50
+      },
+      "US": {
+        "count": 50,
+        "total": 50,
+        "rate": 1.0,
+        "ci95": [
+          0.9286499658256813,
+          1.0
+        ],
+        "measured": 50,
+        "expected": 50
+      }
+    },
+    "6": {
+      "count": 0,
+      "total": 150,
+      "rate": 0.0,
+      "ci95": [
+        0.0,
+        0.02497113914571871
+      ],
+      "measured": 150,
+      "expected": 150,
+      "note": "同报告 prompt、无工具数据；报告层解析；弃答=错",
+      "abstain": {
+        "count": 148,
+        "total": 150
+      }
+    },
+    "7": {
+      "count": 338,
+      "total": 348,
+      "rate": 0.9712643678160919,
+      "ci95": [
+        0.9479196137962806,
+        0.9843180749818512
+      ],
+      "by_provider": {
+        "eastmoney": {
+          "ok": 28,
+          "total": 30
+        },
+        "company_profile": {
+          "ok": 33,
+          "total": 33
+        },
+        "serper": {
+          "ok": 247,
+          "total": 255
+        },
+        "sec_edgar": {
+          "ok": 10,
+          "total": 10
+        },
+        "akshare": {
+          "ok": 20,
+          "total": 20
+        }
+      },
+      "by_tool": {
+        "get_stock_quote": {
+          "ok": 28,
+          "total": 30
+        },
+        "get_company_profile": {
+          "ok": 33,
+          "total": 33
+        },
+        "search_web": {
+          "ok": 247,
+          "total": 255
+        },
+        "extract_financial_data": {
+          "ok": 10,
+          "total": 10
+        },
+        "get_cn_financial_abstract": {
+          "ok": 10,
+          "total": 10
+        },
+        "get_hk_financial_abstract": {
+          "ok": 10,
+          "total": 10
+        }
+      }
+    },
+    "8": {
+      "count": 0,
+      "total": 0,
+      "rate": null,
+      "ci95": [
+        null,
+        null
+      ],
+      "note": "本次未调用 tavily（provider 未启用或配置不同），按 N/A 处理"
+    },
+    "9": {
+      "count": 10,
+      "total": 10,
+      "rate": 1.0,
+      "ci95": [
+        0.7224598312333834,
+        1.0
+      ]
+    },
+    "10": {
+      "count": 20,
+      "total": 20,
+      "rate": 1.0,
+      "ci95": [
+        0.8388698745050667,
+        1.0
+      ],
+      "note": "语义成功=返回非空/有效；字段正确性见指标 5"
+    },
+    "11": {
+      "count": 0,
+      "total": 0,
+      "rate": null,
+      "ci95": [
+        null,
+        null
+      ],
+      "note": "本次未调用 yfinance（provider 未启用或配置不同），按 N/A 处理"
+    },
+    "12": {
+      "count": 0,
+      "total": 0,
+      "rate": null,
+      "ci95": [
+        null,
+        null
+      ],
+      "note": "本次未调用 finnhub（provider 未启用或配置不同），按 N/A 处理"
+    },
+    "13": {
+      "p50_s": 58.415000000000006,
+      "n": 30,
+      "ci95": [
+        55.6785,
+        62.867
+      ],
+      "p50_success_only_s": 58.415000000000006
+    },
+    "14": {
+      "p95_s": 82.92854999999994,
+      "n": 30,
+      "ci95": [
+        65.456,
+        93.612
+      ],
+      "p95_success_only_s": 82.92854999999994
+    },
+    "15": {
+      "input_tokens": 532346,
+      "output_tokens": 262974,
+      "cached_tokens": 335360,
+      "n_reports": 30,
+      "total_cost": null,
+      "per_report_cost": null,
+      "currency": "CNY",
+      "prices_as_of": "",
+      "note": "prices.json 未配置单价；只报告 token，成本待填"
+    },
+    "16": {
+      "count": 10,
+      "total": 10,
+      "rate": 1.0,
+      "ci95": [
+        0.7224598312333834,
+        1.0
+      ],
+      "measured": 10,
+      "expected": 10,
+      "details": [
+        {
+          "fault": "entity_timeout",
+          "passed": true,
+          "failed_checks": []
+        },
+        {
+          "fault": "entity_invalid",
+          "passed": true,
+          "failed_checks": []
+        },
+        {
+          "fault": "search_down",
+          "passed": true,
+          "failed_checks": []
+        },
+        {
+          "fault": "search_rate_limit",
+          "passed": true,
+          "failed_checks": []
+        },
+        {
+          "fault": "profile_down",
+          "passed": true,
+          "failed_checks": []
+        },
+        {
+          "fault": "sec_down",
+          "passed": true,
+          "failed_checks": []
+        },
+        {
+          "fault": "akshare_down",
+          "passed": true,
+          "failed_checks": []
+        },
+        {
+          "fault": "quote_down",
+          "passed": true,
+          "failed_checks": []
+        },
+        {
+          "fault": "llm_timeout",
+          "passed": true,
+          "failed_checks": []
+        },
+        {
+          "fault": "llm_invalid",
+          "passed": true,
+          "failed_checks": []
+        }
+      ]
+    },
+    "2": {
+      "count": 3,
+      "total": 3,
+      "rate": 1.0,
+      "ci95": [
+        0.43849391955098227,
+        1.0
+      ],
+      "measured": 3,
+      "expected": 3,
+      "loose_count": 3,
+      "details": [
+        {
+          "code": "ZZZZZZ",
+          "passed": true,
+          "failed_checks": [],
+          "entity_status": "failed",
+          "final_status": "failed"
+        },
+        {
+          "code": "999999.SH",
+          "passed": true,
+          "failed_checks": [],
+          "entity_status": "failed",
+          "final_status": "failed"
+        },
+        {
+          "code": "88888.HK",
+          "passed": true,
+          "failed_checks": [],
+          "entity_status": "failed",
+          "final_status": "failed"
+        }
+      ]
+    },
+    "17": {
+      "n_reports": 0,
+      "n_raters": 0,
+      "mean": null,
+      "sd": null,
+      "agreement_within_1": null,
+      "note": "human_scores.csv 未填写"
+    },
+    "18": {
+      "n_reports": 0,
+      "n_raters": 0,
+      "mean": null,
+      "sd": null,
+      "agreement_within_1": null,
+      "note": "human_scores.csv 未填写"
+    },
+    "19": {
+      "n_reports": 0,
+      "n_raters": 0,
+      "mean": null,
+      "sd": null,
+      "agreement_within_1": null,
+      "note": "human_scores.csv 未填写"
+    },
+    "20": {
+      "n_reports": 0,
+      "n_raters": 0,
+      "mean": null,
+      "sd": null,
+      "agreement_within_1": null,
+      "note": "human_scores.csv 未填写"
+    },
+    "21": {
+      "top3": [
+        {
+          "type": "numeric_calc",
+          "count": 1
+        }
+      ],
+      "all": {
+        "numeric_calc": 1
+      },
+      "note": "自动归因；最终 Top3 需按 ERROR_TAXONOMY 人工复核"
+    }
+  },
+  "field_rows": [
+    {
+      "symbol": "AAPL",
+      "market": "US",
+      "field": "revenue",
+      "actual": 416160999999.99994,
+      "expected": 416161000000.0,
+      "correct": true,
+      "reason": "",
+      "label": "营业收入",
+      "needs_review": false
+    },
+    {
+      "symbol": "AAPL",
+      "market": "US",
+      "field": "net_income",
+      "actual": 112009999999.99998,
+      "expected": 112010000000.0,
+      "correct": true,
+      "reason": "",
+      "label": "净利润",
+      "needs_review": false
+    },
+    {
+      "symbol": "AAPL",
+      "market": "US",
+      "field": "gross_margin",
+      "actual": 0.46909999999999996,
+      "expected": 0.4690516410716045,
+      "correct": true,
+      "reason": "",
+      "label": "毛利率",
+      "needs_review": false
+    },
+    {
+      "symbol": "AAPL",
+      "market": "US",
+      "field": "net_margin",
+      "actual": 0.2692,
+      "expected": 0.2691506412181824,
+      "correct": true,
+      "reason": "",
+      "label": "净利率",
+      "needs_review": false
+    },
+    {
+      "symbol": "AAPL",
+      "market": "US",
+      "field": "operating_margin",
+      "actual": 0.3197,
+      "expected": 0.31970799762591884,
+      "correct": true,
+      "reason": "",
+      "label": "营业利润率",
+      "needs_review": false
+    },
+    {
+      "symbol": "MSFT",
+      "market": "US",
+      "field": "revenue",
+      "actual": 331839000000.0,
+      "expected": 331839000000.0,
+      "correct": true,
+      "reason": "",
+      "label": "营业收入",
+      "needs_review": false
+    },
+    {
+      "symbol": "MSFT",
+      "market": "US",
+      "field": "net_income",
+      "actual": 133749000000.0,
+      "expected": 133749000000.0,
+      "correct": true,
+      "reason": "",
+      "label": "净利润",
+      "needs_review": false
+    },
+    {
+      "symbol": "MSFT",
+      "market": "US",
+      "field": "gross_margin",
+      "actual": 0.6794,
+      "expected": 0.6794409337058032,
+      "correct": true,
+      "reason": "",
+      "label": "毛利率",
+      "needs_review": false
+    },
+    {
+      "symbol": "MSFT",
+      "market": "US",
+      "field": "net_margin",
+      "actual": 0.4031,
+      "expected": 0.4030538905915218,
+      "correct": true,
+      "reason": "",
+      "label": "净利率",
+      "needs_review": false
+    },
+    {
+      "symbol": "MSFT",
+      "market": "US",
+      "field": "operating_margin",
+      "actual": 0.4678,
+      "expected": 0.4678081840892722,
+      "correct": true,
+      "reason": "",
+      "label": "营业利润率",
+      "needs_review": false
+    },
+    {
+      "symbol": "GOOGL",
+      "market": "US",
+      "field": "revenue",
+      "actual": 402836000000.0,
+      "expected": 402836000000.0,
+      "correct": true,
+      "reason": "",
+      "label": "营业收入",
+      "needs_review": false
+    },
+    {
+      "symbol": "GOOGL",
+      "market": "US",
+      "field": "net_income",
+      "actual": 132170000000.0,
+      "expected": 132170000000.0,
+      "correct": true,
+      "reason": "",
+      "label": "净利润",
+      "needs_review": false
+    },
+    {
+      "symbol": "GOOGL",
+      "market": "US",
+      "field": "gross_margin",
+      "actual": 0.5965,
+      "expected": 0.5965231508603998,
+      "correct": true,
+      "reason": "",
+      "label": "毛利率",
+      "needs_review": false
+    },
+    {
+      "symbol": "GOOGL",
+      "market": "US",
+      "field": "net_margin",
+      "actual": 0.3281,
+      "expected": 0.3280987796522654,
+      "correct": true,
+      "reason": "",
+      "label": "净利率",
+      "needs_review": false
+    },
+    {
+      "symbol": "GOOGL",
+      "market": "US",
+      "field": "operating_margin",
+      "actual": 0.32030000000000003,
+      "expected": 0.32032638592380025,
+      "correct": true,
+      "reason": "",
+      "label": "营业利润率",
+      "needs_review": false
+    },
+    {
+      "symbol": "AMZN",
+      "market": "US",
+      "field": "revenue",
+      "actual": 716924000000.0,
+      "expected": 716924000000.0,
+      "correct": true,
+      "reason": "",
+      "label": "营业收入",
+      "needs_review": false
+    },
+    {
+      "symbol": "AMZN",
+      "market": "US",
+      "field": "net_income",
+      "actual": 77670000000.0,
+      "expected": 77670000000.0,
+      "correct": true,
+      "reason": "",
+      "label": "净利润",
+      "needs_review": false
+    },
+    {
+      "symbol": "AMZN",
+      "market": "US",
+      "field": "gross_margin",
+      "actual": 0.5029,
+      "expected": 0.5028566486824266,
+      "correct": true,
+      "reason": "",
+      "label": "毛利率",
+      "needs_review": false
+    },
+    {
+      "symbol": "AMZN",
+      "market": "US",
+      "field": "net_margin",
+      "actual": 0.10830000000000001,
+      "expected": 0.10833784334183261,
+      "correct": true,
+      "reason": "",
+      "label": "净利率",
+      "needs_review": false
+    },
+    {
+      "symbol": "AMZN",
+      "market": "US",
+      "field": "operating_margin",
+      "actual": 0.1116,
+      "expected": 0.11155296795755199,
+      "correct": true,
+      "reason": "",
+      "label": "营业利润率",
+      "needs_review": false
+    },
+    {
+      "symbol": "META",
+      "market": "US",
+      "field": "revenue",
+      "actual": 200966000000.0,
+      "expected": 200966000000.0,
+      "correct": true,
+      "reason": "",
+      "label": "营业收入",
+      "needs_review": false
+    },
+    {
+      "symbol": "META",
+      "market": "US",
+      "field": "net_income",
+      "actual": 60458000000.00001,
+      "expected": 60458000000.0,
+      "correct": true,
+      "reason": "",
+      "label": "净利润",
+      "needs_review": false
+    },
+    {
+      "symbol": "META",
+      "market": "US",
+      "field": "gross_margin",
+      "actual": 0.82,
+      "expected": 0.8199944269179861,
+      "correct": true,
+      "reason": "",
+      "label": "毛利率",
+      "needs_review": false
+    },
+    {
+      "symbol": "META",
+      "market": "US",
+      "field": "net_margin",
+      "actual": 0.30079999999999996,
+      "expected": 0.3008369574952977,
+      "correct": true,
+      "reason": "",
+      "label": "净利率",
+      "needs_review": false
+    },
+    {
+      "symbol": "META",
+      "market": "US",
+      "field": "operating_margin",
+      "actual": 0.4144,
+      "expected": 0.41437855159579234,
+      "correct": true,
+      "reason": "",
+      "label": "经营利润率",
+      "needs_review": false
+    },
+    {
+      "symbol": "NVDA",
+      "market": "US",
+      "field": "revenue",
+      "actual": 215938000000.0,
+      "expected": 215938000000.0,
+      "correct": true,
+      "reason": "",
+      "label": "营业收入",
+      "needs_review": false
+    },
+    {
+      "symbol": "NVDA",
+      "market": "US",
+      "field": "net_income",
+      "actual": 120067000000.0,
+      "expected": 120067000000.0,
+      "correct": true,
+      "reason": "",
+      "label": "净利润",
+      "needs_review": false
+    },
+    {
+      "symbol": "NVDA",
+      "market": "US",
+      "field": "gross_margin",
+      "actual": 0.7106999999999999,
+      "expected": 0.7106808435754708,
+      "correct": true,
+      "reason": "",
+      "label": "毛利率",
+      "needs_review": false
+    },
+    {
+      "symbol": "NVDA",
+      "market": "US",
+      "field": "net_margin",
+      "actual": 0.556,
+      "expected": 0.5560253406070261,
+      "correct": true,
+      "reason": "",
+      "label": "净利率",
+      "needs_review": false
+    },
+    {
+      "symbol": "NVDA",
+      "market": "US",
+      "field": "operating_margin",
+      "actual": 0.6038,
+      "expected": 0.6038168363141272,
+      "correct": true,
+      "reason": "",
+      "label": "营业利润率",
+      "needs_review": false
+    },
+    {
+      "symbol": "TSLA",
+      "market": "US",
+      "field": "revenue",
+      "actual": 94827000000.0,
+      "expected": 94827000000.0,
+      "correct": true,
+      "reason": "",
+      "label": "营业收入",
+      "needs_review": false
+    },
+    {
+      "symbol": "TSLA",
+      "market": "US",
+      "field": "net_income",
+      "actual": 3794000000.0,
+      "expected": 3794000000.0,
+      "correct": true,
+      "reason": "",
+      "label": "净利润",
+      "needs_review": false
+    },
+    {
+      "symbol": "TSLA",
+      "market": "US",
+      "field": "gross_margin",
+      "actual": 0.18030000000000002,
+      "expected": 0.18026511436616155,
+      "correct": true,
+      "reason": "",
+      "label": "毛利率",
+      "needs_review": false
+    },
+    {
+      "symbol": "TSLA",
+      "market": "US",
+      "field": "net_margin",
+      "actual": 0.04,
+      "expected": 0.04000970187815706,
+      "correct": true,
+      "reason": "",
+      "label": "净利率",
+      "needs_review": false
+    },
+    {
+      "symbol": "TSLA",
+      "market": "US",
+      "field": "operating_margin",
+      "actual": 0.045899999999999996,
+      "expected": 0.04592573845001951,
+      "correct": true,
+      "reason": "",
+      "label": "营业利润率",
+      "needs_review": false
+    },
+    {
+      "symbol": "WMT",
+      "market": "US",
+      "field": "revenue",
+      "actual": 706413000000.0,
+      "expected": 706413000000.0,
+      "correct": true,
+      "reason": "",
+      "label": "营业收入",
+      "needs_review": false
+    },
+    {
+      "symbol": "WMT",
+      "market": "US",
+      "field": "net_income",
+      "actual": 21893000000.0,
+      "expected": 21893000000.0,
+      "correct": true,
+      "reason": "",
+      "label": "净利润",
+      "needs_review": false
+    },
+    {
+      "symbol": "WMT",
+      "market": "US",
+      "field": "gross_margin",
+      "actual": 0.2421,
+      "expected": 0.2420935062067091,
+      "correct": true,
+      "reason": "",
+      "label": "毛利率",
+      "needs_review": false
+    },
+    {
+      "symbol": "WMT",
+      "market": "US",
+      "field": "net_margin",
+      "actual": 0.031,
+      "expected": 0.030991785258765055,
+      "correct": true,
+      "reason": "",
+      "label": "净利率",
+      "needs_review": false
+    },
+    {
+      "symbol": "WMT",
+      "market": "US",
+      "field": "operating_margin",
+      "actual": 0.042199999999999994,
+      "expected": 0.04222034418958881,
+      "correct": true,
+      "reason": "",
+      "label": "营业利润率",
+      "needs_review": false
+    },
+    {
+      "symbol": "KO",
+      "market": "US",
+      "field": "revenue",
+      "actual": 47941000000.0,
+      "expected": 47941000000.0,
+      "correct": true,
+      "reason": "",
+      "label": "营业收入",
+      "needs_review": false
+    },
+    {
+      "symbol": "KO",
+      "market": "US",
+      "field": "net_income",
+      "actual": 13107000000.0,
+      "expected": 13107000000.0,
+      "correct": true,
+      "reason": "",
+      "label": "净利润",
+      "needs_review": false
+    },
+    {
+      "symbol": "KO",
+      "market": "US",
+      "field": "gross_margin",
+      "actual": 0.6163000000000001,
+      "expected": 0.6162574831563797,
+      "correct": true,
+      "reason": "",
+      "label": "毛利率",
+      "needs_review": false
+    },
+    {
+      "symbol": "KO",
+      "market": "US",
+      "field": "net_margin",
+      "actual": 0.2734,
+      "expected": 0.2733985523873094,
+      "correct": true,
+      "reason": "",
+      "label": "净利率",
+      "needs_review": false
+    },
+    {
+      "symbol": "KO",
+      "market": "US",
+      "field": "operating_margin",
+      "actual": 0.2871,
+      "expected": 0.28706117936630443,
+      "correct": true,
+      "reason": "",
+      "label": "营业利润率",
+      "needs_review": false
+    },
+    {
+      "symbol": "PG",
+      "market": "US",
+      "field": "revenue",
+      "actual": 87032000000.0,
+      "expected": 87032000000.0,
+      "correct": true,
+      "reason": "",
+      "label": "营业收入",
+      "needs_review": false
+    },
+    {
+      "symbol": "PG",
+      "market": "US",
+      "field": "net_income",
+      "actual": 16046000000.0,
+      "expected": 16046000000.0,
+      "correct": true,
+      "reason": "",
+      "label": "净利润",
+      "needs_review": false
+    },
+    {
+      "symbol": "PG",
+      "market": "US",
+      "field": "gross_margin",
+      "actual": 0.5018,
+      "expected": 0.5017694641051568,
+      "correct": true,
+      "reason": "",
+      "label": "毛利率",
+      "needs_review": false
+    },
+    {
+      "symbol": "PG",
+      "market": "US",
+      "field": "net_margin",
+      "actual": 0.1844,
+      "expected": 0.18436896773600514,
+      "correct": true,
+      "reason": "",
+      "label": "净利率",
+      "needs_review": false
+    },
+    {
+      "symbol": "PG",
+      "market": "US",
+      "field": "operating_margin",
+      "actual": 0.22690000000000002,
+      "expected": 0.22690504641970768,
+      "correct": true,
+      "reason": "",
+      "label": "营业利润率",
+      "needs_review": false
+    },
+    {
+      "symbol": "600519.SH",
+      "market": "CN",
+      "field": "revenue",
+      "actual": 92278000000.0,
+      "expected": 92278072083.21,
+      "correct": true,
+      "reason": "",
+      "label": "营业总收入",
+      "needs_review": false
+    },
+    {
+      "symbol": "600519.SH",
+      "market": "CN",
+      "field": "net_income",
+      "actual": 44517000000.0,
+      "expected": 44516880421.86,
+      "correct": true,
+      "reason": "",
+      "label": "归母净利润",
+      "needs_review": false
+    },
+    {
+      "symbol": "600519.SH",
+      "market": "CN",
+      "field": "gross_margin",
+      "actual": 0.8956000000000001,
+      "expected": 0.8973346283466215,
+      "correct": true,
+      "reason": "",
+      "label": "毛利率",
+      "needs_review": false
+    },
+    {
+      "symbol": "600519.SH",
+      "market": "CN",
+      "field": "net_margin",
+      "actual": 0.4824,
+      "expected": 0.4824210066040147,
+      "correct": true,
+      "reason": "",
+      "label": "净利率",
+      "needs_review": false
+    },
+    {
+      "symbol": "600519.SH",
+      "market": "CN",
+      "field": "operating_margin",
+      "actual": 0.6655,
+      "expected": 0.6655025435608747,
+      "correct": true,
+      "reason": "",
+      "label": "营业利润率",
+      "needs_review": false
+    },
+    {
+      "symbol": "000858.SZ",
+      "market": "CN",
+      "field": "revenue",
+      "actual": 28417000000.0,
+      "expected": 28416674541.77,
+      "correct": true,
+      "reason": "",
+      "label": "营业收入",
+      "needs_review": false
+    },
+    {
+      "symbol": "000858.SZ",
+      "market": "CN",
+      "field": "net_income",
+      "actual": 8753000000.0,
+      "expected": 8752942991.31,
+      "correct": true,
+      "reason": "",
+      "label": "净利润",
+      "needs_review": false
+    },
+    {
+      "symbol": "000858.SZ",
+      "market": "CN",
+      "field": "gross_margin",
+      "actual": 0.8029000000000001,
+      "expected": 0.8029492044018315,
+      "correct": true,
+      "reason": "",
+      "label": "毛利率",
+      "needs_review": false
+    },
+    {
+      "symbol": "000858.SZ",
+      "market": "CN",
+      "field": "net_margin",
+      "actual": 0.308,
+      "expected": 0.30802136887776743,
+      "correct": true,
+      "reason": "",
+      "label": "净利率",
+      "needs_review": false
+    },
+    {
+      "symbol": "000858.SZ",
+      "market": "CN",
+      "field": "operating_margin",
+      "actual": 0.42210000000000003,
+      "expected": 0.4220508587051921,
+      "correct": true,
+      "reason": "",
+      "label": "营业利润率",
+      "needs_review": false
+    },
+    {
+      "symbol": "000333.SZ",
+      "market": "CN",
+      "field": "revenue",
+      "actual": 261052000000.0,
+      "expected": 261052379000.0,
+      "correct": true,
+      "reason": "",
+      "label": "营业收入",
+      "needs_review": false
+    },
+    {
+      "symbol": "000333.SZ",
+      "market": "CN",
+      "field": "net_income",
+      "actual": 26445999999.999996,
+      "expected": 26446037000.0,
+      "correct": true,
+      "reason": "",
+      "label": "净利润",
+      "needs_review": false
+    },
+    {
+      "symbol": "000333.SZ",
+      "market": "CN",
+      "field": "gross_margin",
+      "actual": 0.2526,
+      "expected": 0.25544914877025504,
+      "correct": false,
+      "reason": "numeric_calc",
+      "label": "毛利率",
+      "needs_review": false
+    },
+    {
+      "symbol": "000333.SZ",
+      "market": "CN",
+      "field": "net_margin",
+      "actual": 0.1013,
+      "expected": 0.10130548168649327,
+      "correct": true,
+      "reason": "",
+      "label": "净利率",
+      "needs_review": false
+    },
+    {
+      "symbol": "000333.SZ",
+      "market": "CN",
+      "field": "operating_margin",
+      "actual": 0.12140000000000001,
+      "expected": 0.12137215190825747,
+      "correct": true,
+      "reason": "",
+      "label": "营业利润率",
+      "needs_review": false
+    },
+    {
+      "symbol": "002415.SZ",
+      "market": "CN",
+      "field": "revenue",
+      "actual": 74044000000.0,
+      "expected": 74044332688.88,
+      "correct": true,
+      "reason": "",
+      "label": "营业收入",
+      "needs_review": false
+    },
+    {
+      "symbol": "002415.SZ",
+      "market": "CN",
+      "field": "net_income",
+      "actual": 12911000000.000002,
+      "expected": 12911386245.87,
+      "correct": true,
+      "reason": "",
+      "label": "归母净利润",
+      "needs_review": false
+    },
+    {
+      "symbol": "002415.SZ",
+      "market": "CN",
+      "field": "gross_margin",
+      "actual": 0.4963,
+      "expected": 0.49629555743053927,
+      "correct": true,
+      "reason": "",
+      "label": "毛利率",
+      "needs_review": false
+    },
+    {
+      "symbol": "002415.SZ",
+      "market": "CN",
+      "field": "net_margin",
+      "actual": 0.1744,
+      "expected": 0.17437372688766276,
+      "correct": true,
+      "reason": "",
+      "label": "净利率",
+      "needs_review": false
+    },
+    {
+      "symbol": "002415.SZ",
+      "market": "CN",
+      "field": "operating_margin",
+      "actual": 0.2273,
+      "expected": 0.22732090404749922,
+      "correct": true,
+      "reason": "",
+      "label": "营业利润率",
+      "needs_review": false
+    },
+    {
+      "symbol": "600276.SH",
+      "market": "CN",
+      "field": "revenue",
+      "actual": 15456000000.0,
+      "expected": 15455583728.11,
+      "correct": true,
+      "reason": "",
+      "label": "营业收入",
+      "needs_review": false
+    },
+    {
+      "symbol": "600276.SH",
+      "market": "CN",
+      "field": "net_income",
+      "actual": 4465000000.0,
+      "expected": 4465439428.1,
+      "correct": true,
+      "reason": "",
+      "label": "归母净利润",
+      "needs_review": false
+    },
+    {
+      "symbol": "600276.SH",
+      "market": "CN",
+      "field": "gross_margin",
+      "actual": 0.8633,
+      "expected": 0.8632634608613109,
+      "correct": true,
+      "reason": "",
+      "label": "毛利率",
+      "needs_review": false
+    },
+    {
+      "symbol": "600276.SH",
+      "market": "CN",
+      "field": "net_margin",
+      "actual": 0.2889,
+      "expected": 0.28892078789482645,
+      "correct": true,
+      "reason": "",
+      "label": "净利率",
+      "needs_review": false
+    },
+    {
+      "symbol": "600276.SH",
+      "market": "CN",
+      "field": "operating_margin",
+      "actual": 0.3292,
+      "expected": 0.32918475152488846,
+      "correct": true,
+      "reason": "",
+      "label": "营业利润率",
+      "needs_review": false
+    },
+    {
+      "symbol": "000651.SZ",
+      "market": "CN",
+      "field": "revenue",
+      "actual": 89673000000.0,
+      "expected": 89672955427.92,
+      "correct": true,
+      "reason": "",
+      "label": "营业总收入",
+      "needs_review": false
+    },
+    {
+      "symbol": "000651.SZ",
+      "market": "CN",
+      "field": "net_income",
+      "actual": 13278000000.0,
+      "expected": 13277590882.57,
+      "correct": true,
+      "reason": "",
+      "label": "归母净利润",
+      "needs_review": false
+    },
+    {
+      "symbol": "000651.SZ",
+      "market": "CN",
+      "field": "gross_margin",
+      "actual": 0.28809999999999997,
+      "expected": 0.29031400765145776,
+      "correct": true,
+      "reason": "",
+      "label": "毛利率",
+      "needs_review": false
+    },
+    {
+      "symbol": "000651.SZ",
+      "market": "CN",
+      "field": "net_margin",
+      "actual": 0.1481,
+      "expected": 0.14806683708827525,
+      "correct": true,
+      "reason": "",
+      "label": "净利率",
+      "needs_review": false
+    },
+    {
+      "symbol": "000651.SZ",
+      "market": "CN",
+      "field": "operating_margin",
+      "actual": 0.17920000000000003,
+      "expected": 0.1792202325590595,
+      "correct": true,
+      "reason": "",
+      "label": "营业利润率",
+      "needs_review": false
+    },
+    {
+      "symbol": "002714.SZ",
+      "market": "CN",
+      "field": "revenue",
+      "actual": 59410000000.0,
+      "expected": 59410306384.59,
+      "correct": true,
+      "reason": "",
+      "label": "营业收入",
+      "needs_review": false
+    },
+    {
+      "symbol": "002714.SZ",
+      "market": "CN",
+      "field": "net_income",
+      "actual": -6078000000.0,
+      "expected": -6077653278.94,
+      "correct": true,
+      "reason": "",
+      "label": "净利润",
+      "needs_review": false
+    },
+    {
+      "symbol": "002714.SZ",
+      "market": "CN",
+      "field": "gross_margin",
+      "actual": -0.0158,
+      "expected": -0.015756373647196217,
+      "correct": true,
+      "reason": "",
+      "label": "毛利率",
+      "needs_review": false
+    },
+    {
+      "symbol": "002714.SZ",
+      "market": "CN",
+      "field": "net_margin",
+      "actual": -0.1023,
+      "expected": -0.10229964544529663,
+      "correct": true,
+      "reason": "",
+      "label": "净利率",
+      "needs_review": false
+    },
+    {
+      "symbol": "002714.SZ",
+      "market": "CN",
+      "field": "operating_margin",
+      "actual": -0.0906,
+      "expected": -0.09064641837980592,
+      "correct": true,
+      "reason": "",
+      "label": "营业利润率",
+      "needs_review": false
+    },
+    {
+      "symbol": "002594.SZ",
+      "market": "CN",
+      "field": "revenue",
+      "actual": 344815000000.0,
+      "expected": 344815421000.0,
+      "correct": true,
+      "reason": "",
+      "label": "营业收入",
+      "needs_review": false
+    },
+    {
+      "symbol": "002594.SZ",
+      "market": "CN",
+      "field": "net_income",
+      "actual": 12325000000.0,
+      "expected": 12325408000.0,
+      "correct": true,
+      "reason": "",
+      "label": "净利润",
+      "needs_review": false
+    },
+    {
+      "symbol": "002594.SZ",
+      "market": "CN",
+      "field": "gross_margin",
+      "actual": 0.1885,
+      "expected": 0.1884734789747121,
+      "correct": true,
+      "reason": "",
+      "label": "毛利率",
+      "needs_review": false
+    },
+    {
+      "symbol": "002594.SZ",
+      "market": "CN",
+      "field": "net_margin",
+      "actual": 0.035699999999999996,
+      "expected": 0.03574494424946267,
+      "correct": true,
+      "reason": "",
+      "label": "净利率",
+      "needs_review": false
+    },
+    {
+      "symbol": "002594.SZ",
+      "market": "CN",
+      "field": "operating_margin",
+      "actual": 0.042800000000000005,
+      "expected": 0.042757884659688696,
+      "correct": true,
+      "reason": "",
+      "label": "营业利润率",
+      "needs_review": false
+    },
+    {
+      "symbol": "600887.SH",
+      "market": "CN",
+      "field": "revenue",
+      "actual": 64490000000.0,
+      "expected": 64489715236.16,
+      "correct": true,
+      "reason": "",
+      "label": "营业收入",
+      "needs_review": false
+    },
+    {
+      "symbol": "600887.SH",
+      "market": "CN",
+      "field": "net_income",
+      "actual": 5759000000.0,
+      "expected": 5758628097.79,
+      "correct": true,
+      "reason": "",
+      "label": "归母净利润",
+      "needs_review": false
+    },
+    {
+      "symbol": "600887.SH",
+      "market": "CN",
+      "field": "gross_margin",
+      "actual": 0.3643,
+      "expected": 0.36588218562453356,
+      "correct": true,
+      "reason": "",
+      "label": "毛利率",
+      "needs_review": false
+    },
+    {
+      "symbol": "600887.SH",
+      "market": "CN",
+      "field": "net_margin",
+      "actual": 0.08929999999999999,
+      "expected": 0.08929529424501291,
+      "correct": true,
+      "reason": "",
+      "label": "净利率",
+      "needs_review": false
+    },
+    {
+      "symbol": "600887.SH",
+      "market": "CN",
+      "field": "operating_margin",
+      "actual": 0.1165,
+      "expected": 0.11648968735479441,
+      "correct": true,
+      "reason": "",
+      "label": "营业利润率",
+      "needs_review": false
+    },
+    {
+      "symbol": "600900.SH",
+      "market": "CN",
+      "field": "revenue",
+      "actual": 37929000000.0,
+      "expected": 37929268927.18,
+      "correct": true,
+      "reason": "",
+      "label": "营业收入",
+      "needs_review": false
+    },
+    {
+      "symbol": "600900.SH",
+      "market": "CN",
+      "field": "net_income",
+      "actual": 14756000000.0,
+      "expected": 14755694774.53,
+      "correct": true,
+      "reason": "",
+      "label": "归母净利润",
+      "needs_review": false
+    },
+    {
+      "symbol": "600900.SH",
+      "market": "CN",
+      "field": "gross_margin",
+      "actual": 0.5789,
+      "expected": 0.5789225274760011,
+      "correct": true,
+      "reason": "",
+      "label": "毛利率",
+      "needs_review": false
+    },
+    {
+      "symbol": "600900.SH",
+      "market": "CN",
+      "field": "net_margin",
+      "actual": 0.389,
+      "expected": 0.389031879387375,
+      "correct": true,
+      "reason": "",
+      "label": "净利率",
+      "needs_review": false
+    },
+    {
+      "symbol": "600900.SH",
+      "market": "CN",
+      "field": "operating_margin",
+      "actual": 0.484,
+      "expected": 0.48401528485945755,
+      "correct": true,
+      "reason": "",
+      "label": "营业利润率",
+      "needs_review": false
+    },
+    {
+      "symbol": "00700.HK",
+      "market": "HK",
+      "field": "revenue",
+      "actual": 743689000000.0,
+      "expected": 743689000000.0,
+      "correct": true,
+      "reason": "",
+      "label": "营业收入",
+      "needs_review": false
+    },
+    {
+      "symbol": "00700.HK",
+      "market": "HK",
+      "field": "net_income",
+      "actual": 224842000000.0,
+      "expected": 224842000000.0,
+      "correct": true,
+      "reason": "",
+      "label": "净利润",
+      "needs_review": false
+    },
+    {
+      "symbol": "00700.HK",
+      "market": "HK",
+      "field": "gross_margin",
+      "actual": 0.5682,
+      "expected": 0.5682388740454679,
+      "correct": true,
+      "reason": "",
+      "label": "毛利率",
+      "needs_review": false
+    },
+    {
+      "symbol": "00700.HK",
+      "market": "HK",
+      "field": "net_margin",
+      "actual": 0.3023,
+      "expected": 0.30233336784596787,
+      "correct": true,
+      "reason": "",
+      "label": "净利率",
+      "needs_review": false
+    },
+    {
+      "symbol": "00700.HK",
+      "market": "HK",
+      "field": "operating_margin",
+      "actual": 0.3248,
+      "expected": 0.3248158840590623,
+      "correct": true,
+      "reason": "",
+      "label": "营业利润率",
+      "needs_review": false
+    },
+    {
+      "symbol": "09988.HK",
+      "market": "HK",
+      "field": "revenue",
+      "actual": 1023670000000.0001,
+      "expected": 1023670000000.0,
+      "correct": true,
+      "reason": "",
+      "label": "营业收入",
+      "needs_review": false
+    },
+    {
+      "symbol": "09988.HK",
+      "market": "HK",
+      "field": "net_income",
+      "actual": 103592000000.0,
+      "expected": 103592000000.0,
+      "correct": true,
+      "reason": "",
+      "label": "净利润",
+      "needs_review": false
+    },
+    {
+      "symbol": "09988.HK",
+      "market": "HK",
+      "field": "gross_margin",
+      "actual": 0.3981,
+      "expected": 0.39811071927476627,
+      "correct": true,
+      "reason": "",
+      "label": "毛利率",
+      "needs_review": false
+    },
+    {
+      "symbol": "09988.HK",
+      "market": "HK",
+      "field": "net_margin",
+      "actual": 0.1012,
+      "expected": 0.10119667470962322,
+      "correct": true,
+      "reason": "",
+      "label": "净利率",
+      "needs_review": false
+    },
+    {
+      "symbol": "09988.HK",
+      "market": "HK",
+      "field": "operating_margin",
+      "actual": 0.049,
+      "expected": 0.048990397296003595,
+      "correct": true,
+      "reason": "",
+      "label": "营业利润率",
+      "needs_review": false
+    },
+    {
+      "symbol": "00941.HK",
+      "market": "HK",
+      "field": "revenue",
+      "actual": 895529999999.9999,
+      "expected": 895530000000.0,
+      "correct": true,
+      "reason": "",
+      "label": "营业收入",
+      "needs_review": false
+    },
+    {
+      "symbol": "00941.HK",
+      "market": "HK",
+      "field": "net_income",
+      "actual": 137095000000.0,
+      "expected": 137095000000.0,
+      "correct": true,
+      "reason": "",
+      "label": "净利润",
+      "needs_review": false
+    },
+    {
+      "symbol": "00941.HK",
+      "market": "HK",
+      "field": "gross_margin",
+      "actual": 0.6828,
+      "expected": 0.6828325125903096,
+      "correct": true,
+      "reason": "",
+      "label": "毛利率",
+      "needs_review": false
+    },
+    {
+      "symbol": "00941.HK",
+      "market": "HK",
+      "field": "net_margin",
+      "actual": 0.1531,
+      "expected": 0.1530881154176856,
+      "correct": true,
+      "reason": "",
+      "label": "净利率",
+      "needs_review": false
+    },
+    {
+      "symbol": "00941.HK",
+      "market": "HK",
+      "field": "operating_margin",
+      "actual": 0.1663,
+      "expected": 0.16630598639911562,
+      "correct": true,
+      "reason": "",
+      "label": "营业利润率",
+      "needs_review": false
+    },
+    {
+      "symbol": "01810.HK",
+      "market": "HK",
+      "field": "revenue",
+      "actual": 457286687000.0,
+      "expected": 457286687000.0,
+      "correct": true,
+      "reason": "",
+      "label": "营业收入",
+      "needs_review": false
+    },
+    {
+      "symbol": "01810.HK",
+      "market": "HK",
+      "field": "net_income",
+      "actual": 41643389000.0,
+      "expected": 41643389000.0,
+      "correct": true,
+      "reason": "",
+      "label": "净利润",
+      "needs_review": false
+    },
+    {
+      "symbol": "01810.HK",
+      "market": "HK",
+      "field": "gross_margin",
+      "actual": 0.22260000000000002,
+      "expected": 0.2226302446456308,
+      "correct": true,
+      "reason": "",
+      "label": "毛利率",
+      "needs_review": false
+    },
+    {
+      "symbol": "01810.HK",
+      "market": "HK",
+      "field": "net_margin",
+      "actual": 0.0911,
+      "expected": 0.09106626145886465,
+      "correct": true,
+      "reason": "",
+      "label": "净利率",
+      "needs_review": false
+    },
+    {
+      "symbol": "01810.HK",
+      "market": "HK",
+      "field": "operating_margin",
+      "actual": 0.1048,
+      "expected": 0.1047503051406349,
+      "correct": true,
+      "reason": "",
+      "label": "营业利润率",
+      "needs_review": false
+    },
+    {
+      "symbol": "02020.HK",
+      "market": "HK",
+      "field": "revenue",
+      "actual": 80219000000.0,
+      "expected": 80219000000.0,
+      "correct": true,
+      "reason": "",
+      "label": "营业收入",
+      "needs_review": false
+    },
+    {
+      "symbol": "02020.HK",
+      "market": "HK",
+      "field": "net_income",
+      "actual": 13588000000.0,
+      "expected": 13588000000.0,
+      "correct": true,
+      "reason": "",
+      "label": "净利润",
+      "needs_review": false
+    },
+    {
+      "symbol": "02020.HK",
+      "market": "HK",
+      "field": "gross_margin",
+      "actual": 0.62,
+      "expected": 0.6199778107430908,
+      "correct": true,
+      "reason": "",
+      "label": "毛利率",
+      "needs_review": false
+    },
+    {
+      "symbol": "02020.HK",
+      "market": "HK",
+      "field": "net_margin",
+      "actual": 0.16940000000000002,
+      "expected": 0.16938630499008964,
+      "correct": true,
+      "reason": "",
+      "label": "净利率",
+      "needs_review": false
+    },
+    {
+      "symbol": "02020.HK",
+      "market": "HK",
+      "field": "operating_margin",
+      "actual": 0.23800000000000002,
+      "expected": 0.2379860132886224,
+      "correct": true,
+      "reason": "",
+      "label": "营业利润率",
+      "needs_review": false
+    },
+    {
+      "symbol": "01093.HK",
+      "market": "HK",
+      "field": "revenue",
+      "actual": 26006000000.0,
+      "expected": 26005980000.0,
+      "correct": true,
+      "reason": "",
+      "label": "营业收入",
+      "needs_review": false
+    },
+    {
+      "symbol": "01093.HK",
+      "market": "HK",
+      "field": "net_income",
+      "actual": 3882000000.0,
+      "expected": 3882108000.0,
+      "correct": true,
+      "reason": "",
+      "label": "净利润",
+      "needs_review": false
+    },
+    {
+      "symbol": "01093.HK",
+      "market": "HK",
+      "field": "gross_margin",
+      "actual": 0.6559,
+      "expected": 0.6559454017883579,
+      "correct": true,
+      "reason": "",
+      "label": "毛利率",
+      "needs_review": false
+    },
+    {
+      "symbol": "01093.HK",
+      "market": "HK",
+      "field": "net_margin",
+      "actual": 0.1493,
+      "expected": 0.14927751232601116,
+      "correct": true,
+      "reason": "",
+      "label": "净利率",
+      "needs_review": false
+    },
+    {
+      "symbol": "01093.HK",
+      "market": "HK",
+      "field": "operating_margin",
+      "actual": 0.1884,
+      "expected": 0.18838578665368505,
+      "correct": true,
+      "reason": "",
+      "label": "营业利润率",
+      "needs_review": false
+    },
+    {
+      "symbol": "09618.HK",
+      "market": "HK",
+      "field": "revenue",
+      "actual": 1309085000000.0,
+      "expected": 1309085000000.0,
+      "correct": true,
+      "reason": "",
+      "label": "营业收入",
+      "needs_review": false
+    },
+    {
+      "symbol": "09618.HK",
+      "market": "HK",
+      "field": "net_income",
+      "actual": 19631000000.0,
+      "expected": 19631000000.0,
+      "correct": true,
+      "reason": "",
+      "label": "净利润",
+      "needs_review": false
+    },
+    {
+      "symbol": "09618.HK",
+      "market": "HK",
+      "field": "gross_margin",
+      "actual": 0.1604,
+      "expected": 0.16043877975838086,
+      "correct": true,
+      "reason": "",
+      "label": "毛利率",
+      "needs_review": false
+    },
+    {
+      "symbol": "09618.HK",
+      "market": "HK",
+      "field": "net_margin",
+      "actual": 0.015,
+      "expected": 0.01499597046792225,
+      "correct": true,
+      "reason": "",
+      "label": "净利率",
+      "needs_review": false
+    },
+    {
+      "symbol": "09618.HK",
+      "market": "HK",
+      "field": "operating_margin",
+      "actual": 0.0021,
+      "expected": 0.002119037342876895,
+      "correct": true,
+      "reason": "",
+      "label": "经营利润率",
+      "needs_review": false
+    },
+    {
+      "symbol": "01024.HK",
+      "market": "HK",
+      "field": "revenue",
+      "actual": 142776000000.0,
+      "expected": 142776000000.0,
+      "correct": true,
+      "reason": "",
+      "label": "营业收入",
+      "needs_review": false
+    },
+    {
+      "symbol": "01024.HK",
+      "market": "HK",
+      "field": "net_income",
+      "actual": 18617000000.0,
+      "expected": 18617000000.0,
+      "correct": true,
+      "reason": "",
+      "label": "净利润",
+      "needs_review": false
+    },
+    {
+      "symbol": "01024.HK",
+      "market": "HK",
+      "field": "gross_margin",
+      "actual": 0.5502,
+      "expected": 0.5501554883173643,
+      "correct": true,
+      "reason": "",
+      "label": "毛利率",
+      "needs_review": false
+    },
+    {
+      "symbol": "01024.HK",
+      "market": "HK",
+      "field": "net_margin",
+      "actual": 0.1304,
+      "expected": 0.13039306325993164,
+      "correct": true,
+      "reason": "",
+      "label": "净利率",
+      "needs_review": false
+    },
+    {
+      "symbol": "01024.HK",
+      "market": "HK",
+      "field": "operating_margin",
+      "actual": 0.1445,
+      "expected": 0.14454109934442763,
+      "correct": true,
+      "reason": "",
+      "label": "经营利润率",
+      "needs_review": false
+    },
+    {
+      "symbol": "00981.HK",
+      "market": "HK",
+      "field": "revenue",
+      "actual": 65555999999.99999,
+      "expected": 65556204811.2,
+      "correct": true,
+      "reason": "",
+      "label": "营业收入",
+      "needs_review": false
+    },
+    {
+      "symbol": "00981.HK",
+      "market": "HK",
+      "field": "net_income",
+      "actual": 4816000000.0,
+      "expected": 4815648772.8,
+      "correct": true,
+      "reason": "",
+      "label": "净利润",
+      "needs_review": false
+    },
+    {
+      "symbol": "00981.HK",
+      "market": "HK",
+      "field": "gross_margin",
+      "actual": 0.20980000000000001,
+      "expected": 0.20978247735369876,
+      "correct": true,
+      "reason": "",
+      "label": "毛利率",
+      "needs_review": false
+    },
+    {
+      "symbol": "00981.HK",
+      "market": "HK",
+      "field": "net_margin",
+      "actual": 0.0735,
+      "expected": 0.07345832155276424,
+      "correct": true,
+      "reason": "",
+      "label": "净利率",
+      "needs_review": false
+    },
+    {
+      "symbol": "00981.HK",
+      "market": "HK",
+      "field": "operating_margin",
+      "actual": 0.11900000000000001,
+      "expected": 0.11900513777556482,
+      "correct": true,
+      "reason": "",
+      "label": "营业利润率",
+      "needs_review": false
+    },
+    {
+      "symbol": "09888.HK",
+      "market": "HK",
+      "field": "revenue",
+      "actual": 129079000000.0,
+      "expected": 129079000000.0,
+      "correct": true,
+      "reason": "",
+      "label": "营业收入",
+      "needs_review": false
+    },
+    {
+      "symbol": "09888.HK",
+      "market": "HK",
+      "field": "net_income",
+      "actual": 5589000000.0,
+      "expected": 5589000000.0,
+      "correct": true,
+      "reason": "",
+      "label": "净利润",
+      "needs_review": false
+    },
+    {
+      "symbol": "09888.HK",
+      "market": "HK",
+      "field": "gross_margin",
+      "actual": 0.4388,
+      "expected": 0.43882428590243183,
+      "correct": true,
+      "reason": "",
+      "label": "毛利率",
+      "needs_review": false
+    },
+    {
+      "symbol": "09888.HK",
+      "market": "HK",
+      "field": "net_margin",
+      "actual": 0.0433,
+      "expected": 0.043299064913735,
+      "correct": true,
+      "reason": "",
+      "label": "净利率",
+      "needs_review": false
+    },
+    {
+      "symbol": "09888.HK",
+      "market": "HK",
+      "field": "operating_margin",
+      "actual": -0.0451,
+      "expected": -0.045111908211250475,
+      "correct": true,
+      "reason": "",
+      "label": "经营利润率",
+      "needs_review": false
+    }
+  ]
+}

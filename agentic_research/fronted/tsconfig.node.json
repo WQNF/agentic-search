@@ -1,0 +1,11 @@
+// d:\Python_exercise\项目2-智慧投研Agent\③项目代码\agentic_research\frontend\tsconfig.node.json
+{
+  "compilerOptions": {
+    "composite": true,
+    "skipLibCheck": true,
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "allowSyntheticDefaultImports": true
+  },
+  "include": ["vite.config.ts"]
+}

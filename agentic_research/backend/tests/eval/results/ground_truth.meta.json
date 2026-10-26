@@ -1,0 +1,35 @@
+{
+  "created_at": "2026-10-25T21:34:05+0800",
+  "companies": 30,
+  "rows": 150,
+  "fields": [
+    "revenue",
+    "net_income",
+    "gross_margin",
+    "net_margin",
+    "operating_margin"
+  ],
+  "by_market": {
+    "US": {
+      "fields": 50,
+      "non_null": 50,
+      "tiers": [
+        "official_filing"
+      ]
+    },
+    "CN": {
+      "fields": 50,
+      "non_null": 50,
+      "tiers": [
+        "vendor"
+      ]
+    },
+    "HK": {
+      "fields": 50,
+      "non_null": 50,
+      "tiers": [
+        "vendor"
+      ]
+    }
+  }
+}

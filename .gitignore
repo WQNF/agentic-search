@@ -1,0 +1,45 @@
+# ===== secrets =====
+.env
+**/.env
+!.env.example
+
+# ===== Python =====
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+
+# ===== Node / frontend =====
+node_modules/
+**/fronted/dist/
+**/fronted/.vite/
+
+# ===== runtime / artifacts =====
+runs/
+logs/
+.edgar/
+*.log
+agentic_research.tar.gz
+agentic_research/backend/data/snapshots/
+
+# ===== evaluation raw outputs (keep summary files) =====
+agentic_research/backend/tests/eval/results/runs/
+agentic_research/backend/tests/eval/results/app_runs/
+agentic_research/backend/tests/eval/results/runs_baseline/
+agentic_research/backend/tests/eval/results/runs_faults/
+agentic_research/backend/tests/eval/results/*.jsonl
+
+# old test artifacts (superseded by tests/eval/results)
+agentic_research/backend/tests/_*.json
+agentic_research/backend/tests/metrics_report.json
+agentic_research/backend/tests/ground_truth.json
+
+# ===== OS / IDE =====
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
